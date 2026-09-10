@@ -1,0 +1,64 @@
+package linkedlist;
+
+public class MyStringlyLinkedList {
+
+    Node head, tail;
+
+    public MyStringlyLinkedList() {
+        head = tail = null;
+    }
+
+    public void clear() {
+        head = tail = null;
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void addLast(Person data) {
+        Node n = new Node(data);
+        if (isEmpty()) {
+            head = tail = n;
+            return;
+        }
+        tail.next = n;
+        tail = n;
+    }
+
+    public void viewData(Node n) {
+        if (n != null) {
+            System.out.println(n.data);
+        }
+    }
+
+    public void traverse() {
+        if (isEmpty()) {
+            return;
+        }
+        Node p = new Node();
+        p = head;
+        while (p != null) {
+            System.out.println(p.data);
+            p = p.next;
+        }
+    }
+
+    public void addMany(String[] names, int[] ages) {
+        for (int i = 0; i < names.length; i++) {
+            Person p = new Person(names[i], ages[i]);
+            addLast(p);
+        }
+    }
+
+    public Node searchByName(String name) {
+        Node p = head;
+        while (p != null) {
+            if (p.data.name.equals(name)) {
+                return p;
+            }
+            p = p.next;
+        }
+        return null;
+    }
+}
