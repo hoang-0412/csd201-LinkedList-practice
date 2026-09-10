@@ -16,6 +16,18 @@ public class TestMyStringlyLinkedList {
             System.out.println("Found!");
         }
         System.out.println(MSLL.isEmpty());
+
+//        Thực hiện tiếp các action sau cho SinglyLinkedList:
+//        1. Đếm và trả về số node của list
+//        2. Thêm node vào đầu list
+//        3. Thêm node vào vị trí bất kỳ của list
+//        4. Xóa node cuối list
+//        5. Xóa node đầu list
+//        6. Sắp xếp list theo trật tự tăng dần của info của các node
+//        7. Sắp xếp list theo trật tự giảm dần của info của các node
+//        8. Đảo ngược trật tự các node của list
+//        9. Tìm và hiển thị vị trí của tất cả các node có age lớn nhất
+//        10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
     }
 
 }
