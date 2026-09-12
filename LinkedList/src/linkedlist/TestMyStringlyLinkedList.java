@@ -48,6 +48,10 @@ public class TestMyStringlyLinkedList {
         System.out.println("\n5. Xoa node dau list");
         MSLL.removeFirst();
         MSLL.traverse();
+
+        System.out.println("\n6. Sap xep list theo trat tu tang dan cua info trong node");
+        MSLL.sortByAge();
+        MSLL.traverse();
     }
 
 }
