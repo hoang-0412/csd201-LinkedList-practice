@@ -72,4 +72,13 @@ public class MyStringlyLinkedList {
         }
         return count;
     }
+
+//    2. Thêm node vào đầu list
+    public void addFirst(Person data) {
+        Node n = new Node(data, head);
+        head = n;
+        if (tail == null) {
+            tail = head;
+        }
+    }
 }

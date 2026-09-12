@@ -30,6 +30,10 @@ public class TestMyStringlyLinkedList {
 //        10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
         System.out.println("\n1. Dem va tra ve so node cua list");
         System.out.println("So luong node trong list: " + MSLL.count());
+        System.out.println("\n2. Them node vao dau list");
+        System.out.println("Vi du them David age 25 vao dau list");
+        MSLL.addFirst(new Person("David", 25));
+        MSLL.traverse();
     }
 
 }
