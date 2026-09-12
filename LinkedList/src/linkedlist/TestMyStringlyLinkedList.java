@@ -40,6 +40,26 @@ public class TestMyStringlyLinkedList {
         System.out.println("Vi du them Hoang age 21 vao vi tri 3(index = 2)");
         MSLL.addByIndex(new Person("Hoang", 21), 2);
         MSLL.traverse();
+
+        System.out.println("\n4. Xoa node cuoi list");
+        MSLL.removeLast();
+        MSLL.traverse();
+
+        System.out.println("\n5. Xoa node dau list");
+        MSLL.removeFirst();
+        MSLL.traverse();
+
+        System.out.println("\n6. Sap xep list theo trat tu tang dan cua info trong node");
+        MSLL.sortByAge();
+        MSLL.traverse();
+
+        System.out.println("\n7. Sap xep list theo trat tu giam dan cua info trong node");
+        MSLL.sortByAgeDecrease();
+        MSLL.traverse();
+
+        System.out.println("\n8. Dao nguoc trat tu cac node cua list");
+        MSLL.reverse();
+        MSLL.traverse();
     }
 
 }

@@ -36,6 +36,7 @@ public class MyStringlyLinkedList {
         if (isEmpty()) {
             return;
         }
+
         Node p = new Node();
         p = head;
         while (p != null) {
@@ -102,4 +103,103 @@ public class MyStringlyLinkedList {
         Node newN = new Node(data, p.next);
         p.next = newN;
     }
+
+//    4. Xóa node cuối list
+    public void removeLast() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head == null) {
+            head = tail = null;
+            return;
+        }
+
+        Node p = head;
+        while (p.next != tail) {
+            p = p.next;
+        }
+        p.next = null;
+        tail = p;
+    }
+
+//    5. Xóa node đầu list
+    public void removeFirst() {
+        if (isEmpty()) {
+            return;
+        }
+
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+    }
+
+//    6. Sắp xếp list theo trật tự tăng dần của info của các node
+    public void sortByAge() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head.next == null) {
+            return;
+        }
+
+        for (Node p = head; p != null; p = p.next) {
+            for (Node q = p.next; q != null; q = q.next) {
+                if (p.data.age > q.data.age) {
+                    Person temp = p.data;
+                    p.data = q.data;
+                    q.data = temp;
+                }
+            }
+        }
+    }
+
+//    7. Sắp xếp list theo trật tự giảm dần của info của các node
+    public void sortByAgeDecrease() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head.next == null) {
+            return;
+        }
+
+        for (Node p = head; p != null; p = p.next) {
+            for (Node q = p.next; q != null; q = q.next) {
+                if (p.data.age < q.data.age) {
+                    Person temp = p.data;
+                    p.data = q.data;
+                    q.data = temp;
+                }
+            }
+        }
+    }
+
+//    8. Đảo ngược trật tự các node của list
+    public void reverse() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head.next == null) {
+            return;
+        }
+
+        tail = head;
+        Node before = null;
+        Node current = head;
+        Node after = null;
+        while (current != null) {
+            after = current.next;
+            current.next = before;
+            before = current;
+            current = after;
+        }
+        head = before;
+    }
+
+//    9. Tìm và hiển thị vị trí của tất cả các node có age lớn nhất
+//    10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
 }
