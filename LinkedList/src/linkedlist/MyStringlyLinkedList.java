@@ -36,6 +36,7 @@ public class MyStringlyLinkedList {
         if (isEmpty()) {
             return;
         }
+
         Node p = new Node();
         p = head;
         while (p != null) {
@@ -102,4 +103,29 @@ public class MyStringlyLinkedList {
         Node newN = new Node(data, p.next);
         p.next = newN;
     }
+
+//    4. Xóa node cuối list
+    public void removeLast() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head == null) {
+            head = tail = null;
+            return;
+        }
+
+        Node p = head;
+        while (p.next != tail) {
+            p = p.next;
+        }
+        p.next = null;
+        tail = p;
+    }
+//        5. Xóa node đầu list
+//        6. Sắp xếp list theo trật tự tăng dần của info của các node
+//        7. Sắp xếp list theo trật tự giảm dần của info của các node
+//        8. Đảo ngược trật tự các node của list
+//        9. Tìm và hiển thị vị trí của tất cả các node có age lớn nhất
+//        10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
 }
