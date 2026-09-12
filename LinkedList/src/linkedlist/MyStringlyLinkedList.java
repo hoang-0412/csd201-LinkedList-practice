@@ -61,4 +61,15 @@ public class MyStringlyLinkedList {
         }
         return null;
     }
+
+//    1. Đếm và trả về số node của list
+    public int count() {
+        int count = 0;
+        Node p = head;
+        while (p != null) {
+            count++;
+            p = p.next;
+        }
+        return count;
+    }
 }

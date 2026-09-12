@@ -28,6 +28,8 @@ public class TestMyStringlyLinkedList {
 //        8. Đảo ngược trật tự các node của list
 //        9. Tìm và hiển thị vị trí của tất cả các node có age lớn nhất
 //        10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
+        System.out.println("\n1. Dem va tra ve so node cua list");
+        System.out.println("So luong node trong list: " + MSLL.count());
     }
 
 }
