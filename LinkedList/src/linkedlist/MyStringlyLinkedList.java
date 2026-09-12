@@ -81,4 +81,25 @@ public class MyStringlyLinkedList {
             tail = head;
         }
     }
+
+//    3. Thêm node vào vị trí bất kỳ của list
+    public void addByIndex(Person data, int i) {
+        if (i <= 0) {
+            addFirst(data);
+            return;
+        }
+
+        int total = count();
+        if (i >= total) {
+            addLast(data);
+            return;
+        }
+
+        Node p = head;
+        for (int j = 0; j < i - 1; j++) {
+            p = p.next;
+        }
+        Node newN = new Node(data, p.next);
+        p.next = newN;
+    }
 }
