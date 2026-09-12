@@ -44,6 +44,10 @@ public class TestMyStringlyLinkedList {
         System.out.println("\n4. Xoa node cuoi list");
         MSLL.removeLast();
         MSLL.traverse();
+
+        System.out.println("\n5. Xoa node dau list");
+        MSLL.removeFirst();
+        MSLL.traverse();
     }
 
 }
