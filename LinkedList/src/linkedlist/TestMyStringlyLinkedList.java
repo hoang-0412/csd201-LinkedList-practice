@@ -52,6 +52,10 @@ public class TestMyStringlyLinkedList {
         System.out.println("\n6. Sap xep list theo trat tu tang dan cua info trong node");
         MSLL.sortByAge();
         MSLL.traverse();
+
+        System.out.println("\n7. Sap xep list theo trat tu giam dan cua info trong node");
+        MSLL.sortByAgeDecrease();
+        MSLL.traverse();
     }
 
 }

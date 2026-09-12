@@ -157,6 +157,26 @@ public class MyStringlyLinkedList {
     }
 
 //    7. Sắp xếp list theo trật tự giảm dần của info của các node
+    public void sortByAgeDecrease() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head.next == null) {
+            return;
+        }
+
+        for (Node p = head; p != null; p = p.next) {
+            for (Node q = p.next; q != null; q = q.next) {
+                if (p.data.age < q.data.age) {
+                    Person temp = p.data;
+                    p.data = q.data;
+                    q.data = temp;
+                }
+            }
+        }
+    }
+    
 //    8. Đảo ngược trật tự các node của list
 //    9. Tìm và hiển thị vị trí của tất cả các node có age lớn nhất
 //    10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
