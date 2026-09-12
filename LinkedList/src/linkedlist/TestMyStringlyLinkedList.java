@@ -56,6 +56,10 @@ public class TestMyStringlyLinkedList {
         System.out.println("\n7. Sap xep list theo trat tu giam dan cua info trong node");
         MSLL.sortByAgeDecrease();
         MSLL.traverse();
+
+        System.out.println("\n8. Dao nguoc trat tu cac node cua list");
+        MSLL.reverse();
+        MSLL.traverse();
     }
 
 }

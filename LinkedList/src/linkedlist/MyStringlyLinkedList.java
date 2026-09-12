@@ -176,8 +176,30 @@ public class MyStringlyLinkedList {
             }
         }
     }
-    
+
 //    8. Đảo ngược trật tự các node của list
+    public void reverse() {
+        if (isEmpty()) {
+            return;
+        }
+
+        if (head.next == null) {
+            return;
+        }
+
+        tail = head;
+        Node before = null;
+        Node current = head;
+        Node after = null;
+        while (current != null) {
+            after = current.next;
+            current.next = before;
+            before = current;
+            current = after;
+        }
+        head = before;
+    }
+
 //    9. Tìm và hiển thị vị trí của tất cả các node có age lớn nhất
 //    10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
 }
