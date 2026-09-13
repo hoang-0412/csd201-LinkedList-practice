@@ -63,6 +63,10 @@ public class TestMyStringlyLinkedList {
 
         System.out.println("\n9. Tim va hien thi vi tri cua tat ca cac node co age lon nhat");
         MSLL.findMaxAgeNode();
+
+        System.out.println("\n10. Tim va hien thi vi tri cua tat ca cac node co age nho nhat");
+        MSLL.findMinAge();
+
     }
 
 }

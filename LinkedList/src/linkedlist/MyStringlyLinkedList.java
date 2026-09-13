@@ -229,4 +229,30 @@ public class MyStringlyLinkedList {
     }
 
 //    10. Tìm và hiển thị vị trí của tất cả các node có age nhỏ nhất.
+    public void findMinAge() {
+        if (isEmpty()) {
+            System.err.println("Danh sach rong");
+            return;
+        }
+
+        int minA = head.data.age;
+        Node p = head.next;
+        while (p != null) {
+            if (p.data.age < minA) {
+                minA = p.data.age;
+            }
+            p = p.next;
+        }
+
+        System.out.println("Cac node co age be nhat(" + minA + ") la:");
+        int i = 0;
+        p = head;
+        while (p != null) {
+            if (p.data.age == minA) {
+                System.out.println("-Vi tri " + i + ": " + p.data);
+            }
+            i++;
+            p = p.next;
+        }
+    }
 }
