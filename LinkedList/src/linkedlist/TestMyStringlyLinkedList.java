@@ -60,6 +60,9 @@ public class TestMyStringlyLinkedList {
         System.out.println("\n8. Dao nguoc trat tu cac node cua list");
         MSLL.reverse();
         MSLL.traverse();
+
+        System.out.println("\n9. Tim va hien thi vi tri cua tat ca cac node co age lon nhat");
+        MSLL.findMaxAgeNode();
     }
 
 }
