@@ -65,6 +65,6 @@ public class ArrayStack {
             return;
         }
 
-        as[top++] = data;
+        as[++top] = data;
     }
 }
