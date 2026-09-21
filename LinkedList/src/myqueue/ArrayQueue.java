@@ -17,7 +17,7 @@ public class ArrayQueue {
     }
 
     void clear() {
-        first = -1;
+        first = last = -1;
     }
 
     boolean isEmpty() {
@@ -44,6 +44,8 @@ public class ArrayQueue {
         Object x = aq[first];
         if (first == last) {
             first = last = -1;
+        } else if (first == max - 1) {
+            first = 0;
         } else {
             first++;
         }
@@ -90,7 +92,6 @@ public class ArrayQueue {
                 first = 0;
             }
         } else {
-            last++;
             aq[++last] = data;
         }
     }
